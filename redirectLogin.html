@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Comm-login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        /* Smooth horizontal scroll for the banner */
+        .banner-container {
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .banner-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .banner-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+
+
+        #heroSlider::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- navigation starts here -->
+
+    <nav class="bg-white shadow-sm sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 font-bold text-2xl text-blue-600">SnapBuy</div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product.html" class="text-gray-700 hover:text-blue-600 font-medium">Products</a>
+                    <a href="register.html" class="text-gray-700 hover:text-blue-600 font-medium">Create Account</a>
+                    <a href="login.html"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Login</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
+            <a href="product.html" class="block text-gray-700 font-medium">Products</a>
+            <a href="register.html" class="block text-gray-700 font-medium">Create Account</a>
+            <a href="login.html" class="block text-blue-600 font-bold">Login</a>
+        </div>
+    </nav>
+
+
+    <!-- navigation ends here -->
+
+
+
+
+    <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #ffffff; font-family: 'Inter', -apple-system, sans-serif; padding: 20px;">
+
+        <div
+            style="max-width: 500px; width: 100%; text-align: center; padding: 60px 40px; border-radius: 30px; border: 1px solid #f0f0f0; box-shadow: 0 20px 60px rgba(0,0,0,0.03);">
+
+            <div
+                style="width: 80px; height: 80px; background: #eff6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
+                <span style="font-size: 35px;">🛍️</span>
+            </div>
+
+            <h2 style="font-size: 28px; font-weight: 800; color: #1e293b; margin-bottom: 15px; letter-spacing: -0.5px;">
+                Ready to Purchase?</h2>
+            <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 40px;">
+                To provide you with a secure checkout and track your orders, please <strong>create an account</strong>
+                or <strong>sign in</strong> before adding items to your cart.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="register.html"
+                    style="display: block; padding: 18px; background: #2563eb; color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 16px; transition: 0.3s;">
+                    Create Free Account
+                </a>
+
+                <a href="login.html"
+                    style="display: block; padding: 18px; background: #ffffff; color: #1e293b; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 16px; border: 1.5px solid #e2e8f0; transition: 0.3s;">
+                    Already have an account? Sign In
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- footer starts here -->
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-6">SnapBuy</h2>
+            <div class="flex justify-center space-x-8 mb-8 text-2xl">
+                <a href="https://www.facebook.com/" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?next=%2Fpadma_mahata_&source=omni_redirect"
+                    class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/padma-mahata-43b9703a5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/pujashyam63" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 E-Commerce Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- footer ends here -->
+
+
+
+
+
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

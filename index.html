@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Comm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        /* Smooth horizontal scroll for the banner */
+        .banner-container {
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .banner-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .banner-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+
+
+        #heroSlider::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <!-- navigation starts here -->
+
+    <nav class="bg-white shadow-sm sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 font-bold text-2xl text-blue-600">SnapBuy</div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product.html" class="text-gray-700 hover:text-blue-600 font-medium">Products</a>
+                    <a href="register.html" class="text-gray-700 hover:text-blue-600 font-medium">Create Account</a>
+                    <a href="login.html"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Login</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
+            <a href="product.html" class="block text-gray-700 font-medium">Products</a>
+            <a href="register.html" class="block text-gray-700 font-medium">Create Account</a>
+            <a href="login.html" class="block text-blue-600 font-bold">Login</a>
+        </div>
+    </nav>
+
+
+    <!-- navigation ends here -->
+
+
+
+    <!-- banner part starts here -->
+
+
+
+    <div
+        style="position: relative; width: 100%; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <div id="heroSlider"
+            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; width: 100%; height: 500px; scrollbar-width: none; -ms-overflow-style: none;">
+
+            <div style="flex: 0 0 100%; width: 100%; height: 100%; scroll-snap-align: start; position: relative;">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600"
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Collection 1">
+                <div
+                    style="position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;">
+                    <h1 style="font-size: 3.5rem; margin: 0; font-weight: 900; letter-spacing: -1px;">NEW SEASON</h1>
+                    <p style="font-size: 1.2rem; margin-top: 10px; opacity: 0.9;">Explore the latest arrivals in store.
+                    </p>
+                    <a href="#"
+                        style="margin-top: 25px; padding: 15px 40px; background: white; color: black; text-decoration: none; font-weight: bold; border-radius: 50px; text-transform: uppercase; font-size: 14px;">Shop
+                        Now</a>
+                </div>
+            </div>
+
+            <div style="flex: 0 0 100%; width: 100%; height: 100%; scroll-snap-align: start; position: relative;">
+                <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1600"
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Collection 2">
+                <div
+                    style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;">
+                    <h1 style="font-size: 3.5rem; margin: 0; font-weight: 900; letter-spacing: -1px;">FLASH SALE</h1>
+                    <p style="font-size: 1.2rem; margin-top: 10px; opacity: 0.9;">Up to 60% off on premium electronics.
+                    </p>
+                    <a href="#"
+                        style="margin-top: 25px; padding: 15px 40px; background: #2563eb; color: white; text-decoration: none; font-weight: bold; border-radius: 50px; text-transform: uppercase; font-size: 14px;">View
+                        Deals</a>
+                </div>
+            </div>
+
+            <div style="flex: 0 0 100%; width: 100%; height: 100%; scroll-snap-align: start; position: relative;">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600"
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Collection 3">
+                <div
+                    style="position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;">
+                    <h1 style="font-size: 3.5rem; margin: 0; font-weight: 900; letter-spacing: -1px;">MODERN STYLE</h1>
+                    <p style="font-size: 1.2rem; margin-top: 10px; opacity: 0.9;">Design meets functionality in our new
+                        gear.</p>
+                    <a href="#"
+                        style="margin-top: 25px; padding: 15px 40px; background: white; color: black; text-decoration: none; font-weight: bold; border-radius: 50px; text-transform: uppercase; font-size: 14px;">Discover</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: center; gap: 10px;">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: white; opacity: 0.5;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: white; opacity: 0.5;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: white; opacity: 0.5;"></div>
+        </div>
+    </div>
+
+
+
+    <!-- banner part ends here -->
+
+
+
+    <!-- products part starts here -->
+
+    <section style="max-width: 1200px; margin: 50px auto; padding: 0 20px; font-family: 'Segoe UI', Arial, sans-serif;">
+
+        <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #222; font-weight: 800;">
+            OUR COLLECTION
+        </h2><br>
+
+
+
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px;">
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;">
+                    <img src="photos/WhatsApp Image 2026-04-03 at 11.25.04 AM (1).jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Product 1">
+                </div>
+                <div
+                    style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 18px; margin: 0 0 8px; color: #333;">Men T-shirt</h3>
+                        <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹499</p>
+                    </div>
+                    <button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">
+                        <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.07 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Kurvee Apparel Tops</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹599</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.13 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Necklaces & Chains</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹250</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.02 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Inktee Men's Tshirts</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹200</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.06 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;"> Jewellery Sets </h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹550</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px;">
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;">
+                    <img src="photos/WhatsApp Image 2026-04-03 at 11.25.07 AM (1).jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Product 1">
+                </div>
+                <div
+                    style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 18px; margin: 0 0 8px; color: #333;">Stylish Men Shirts</h3>
+                        <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹349</p>
+                    </div>
+                    <button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">
+                        <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.10 AM (1).jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Trendy Women Analog Watches</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹200</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.20 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Alisha Refined Sarees</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹599</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.22 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Aishani Refined Sarees</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹756</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.21 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Anarkali Gown</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹899</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px;">
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;">
+                    <img src="photos/WhatsApp Image 2026-04-03 at 11.25.12 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Product 1">
+                </div>
+                <div
+                    style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 18px; margin: 0 0 8px; color: #333;">Men Jeans</h3>
+                        <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹800</p>
+                    </div>
+                    <button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">
+                        <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.11 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Men Sunglasses</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹200</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.12 AM (1).jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Women Heels</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹500</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.16 AM.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Fabulous Gown</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹650</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <div
+                style="background: #fff; border-radius: 15px; border: 1px solid #eaeaea; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="width: 100%; height: 220px; overflow: hidden;"><img src="photos/WhatsApp Image 2026-04-03 at 11.25.13 AM (1).jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Men Calsual Shoes</h3>
+                    <p style="font-size: 20px; font-weight: 700; color: #2563eb; margin-bottom: 15px;">₹700</p><button
+                        style="width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 8px; font-weight: 600;">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- products part ends here -->
+
+
+
+
+
+
+
+
+
+    <!-- about us part starts here -->
+    <section id="about" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800"
+                    class="rounded-2xl shadow-lg w-full h-auto">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl font-bold mb-4">About Our Project</h2>
+                <p class="text-gray-600 leading-relaxed">We provide a seamless shopping experience with hand-picked
+                    premium items. Our mission is to make quality products accessible to everyone, anywhere in the
+                    world.</p> <br>
+                <p class="text-gray-600 leading-relaxed">We provide a seamless shopping experience with hand-picked
+                    premium items. Our mission is to make quality products accessible to everyone, anywhere in the
+                    world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us part ends here -->
+
+
+
+    <!-- contact us part starts here -->
+
+
+    <section id="contact"
+        style="max-width: 1200px; margin: 80px auto; padding: 40px; font-family: 'Segoe UI', Arial, sans-serif; background-color: #ffffff; border-radius: 30px; border: 1px solid #f0f0f0; box-shadow: 0 20px 40px rgba(0,0,0,0.02);">
+
+        <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: flex-start;">
+
+            <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 30px;">
+                <div>
+                    <h3 style="font-size: 32px; font-weight: 800; color: #111; margin-bottom: 15px;">Visit Our Office
+                    </h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 25px;">Stop by our location in Binpur or
+                        reach out to us via email or phone for any inquiries.</p>
+
+                    <div style="margin-bottom: 20px;">
+                        <p
+                            style="text-transform: uppercase; font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 1px; margin-bottom: 8px;">
+                            Location</p>
+                        <p style="font-size: 16px; color: #333; font-weight: 500;">Sahari Binpur, Binpur, West Bengal
+                            721515</p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <p
+                            style="text-transform: uppercase; font-size: 12px; font-weight: 700; color: #2563eb; letter-spacing: 1px; margin-bottom: 8px;">
+                            Email & Phone</p>
+                        <p style="font-size: 16px; color: #333; font-weight: 500;">support@snapbuy.com<br>+919907726240
+                        </p>
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid #eee;">
+                    <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14742.697072049616!2d86.9333333!3d22.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6266f86641589%3A0x868778401348270!2sBinpur%2C%20West%20Bengal%20721515!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin">
+                    </iframe>
+                </div>
+            </div>
+
+            <div
+                style="flex: 1; min-width: 320px; background: #fafafa; padding: 40px; border-radius: 25px; border: 1px solid #f1f1f1;">
+                <h4 style="font-size: 24px; font-weight: 700; color: #111; margin-bottom: 25px;">Send a Message</h4>
+                <form style="display: flex; flex-direction: column; gap: 15px;">
+                    <label style="font-size: 14px; font-weight: 600; color: #555;">Full Name</label>
+                    <input type="text" placeholder="Your Name"
+                        style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 15px;">
+
+                    <label style="font-size: 14px; font-weight: 600; color: #555;">Email Address</label>
+                    <input type="email" placeholder="email@example.com"
+                        style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 15px;">
+
+                    <label style="font-size: 14px; font-weight: 600; color: #555;">Message</label>
+                    <textarea rows="5" placeholder="How can we help you?"
+                        style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 15px; resize: none;"></textarea>
+
+                    <button type="submit"
+                        style="margin-top: 10px; padding: 16px; background: #111; color: #fff; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; transition: 0.3s; font-size: 16px;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- contact us part ends here -->
+
+    <!-- footer starts here -->
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-6">SnapBuy</h2>
+            <div class="flex justify-center space-x-8 mb-8 text-2xl">
+                <a href="https://www.facebook.com/" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?next=%2Fpadma_mahata_&source=omni_redirect"
+                    class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/padma-mahata-43b9703a5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/pujashyam63" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 E-Commerce Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- footer ends here -->
+
+
+
+
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+
+        const slider = document.getElementById('heroSlider');
+        let scrollStep = 0;
+
+        setInterval(() => {
+            scrollStep++;
+            if (scrollStep >= 3) scrollStep = 0; // Reset to first slide after the third
+
+            slider.scrollTo({
+                left: slider.offsetWidth * scrollStep,
+                behavior: 'smooth'
+            });
+        }, 3000); // 3000ms = 3 seconds
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
